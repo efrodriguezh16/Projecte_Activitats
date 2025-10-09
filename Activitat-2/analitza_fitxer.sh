@@ -2,9 +2,9 @@
 
 read -p "Nom del fitxer:" FITXER
 
-LINIES=$(grep -cve '^\s*$' "$FITXER" 2>>errors.log)
-PARAULES=$(wc -w "$FITXER" 2>>errors.log)
-CARACTERS=$(wc -m "FITXER" 2>>errors.log)
+LINIES=$(cat "$FITXER" | grep -v '`^$'| wc -l 2>>errors.log)
+PARAULES=$(cat "$FITXER" | wc -w 2>>errors.log)
+CARACTERS=$(cat "$FITXER" | wc -m 2>>errors.log)
 DATA=$(date)
 
 echo "Fitxer analitzat: $FITXER" >> resultats.log
