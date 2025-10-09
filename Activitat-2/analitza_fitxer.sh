@@ -10,6 +10,7 @@ DATA=$(date)
 echo "Fitxer analitzat: $FITXER" >> resultats.log
 echo "Linies no buides: $LINIES" >> resultats.log
 echo "Total Paraules: $PARAULES" >> resultats.log
+echo "Total Caracters: $CARACTERS" >> resultats.log
 echo "Data: $DATA" >> resultats.log
 echo "Executat per: $USER" >> resultats.log
 echo "Directori: $PWD" >> resultats.log
