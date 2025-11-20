@@ -1,0 +1,12 @@
+[Unit]
+Description=Servicio automatico de web con monitorización de cambios
+After=network.target
+
+[Service]
+Type=Simple
+ExecStart=/usr/local/bin/servicio_web.sh
+Restart=on-failure
+User=root
+
+[Install]
+WantedBy=multi-user.target
